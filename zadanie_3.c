@@ -43,11 +43,26 @@ void zadanie_3c()
     x2 = ((-b)-sqrt(delta))/(2*a);
     printf("Wierzcholek funkcji to: W(%.2lf, %.2lf). Miejsca zerowe: x1 = %.2lf, x2 = %.2lf", p, q, x1, x2);
 }
+void zadanie_3d()
+{
+    char c;
+    double n, k;
+    printf("Podaj znak i liczbe poziomow: ");
+    scanf("%c %lf", &c, &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++)
+            printf("%c", c);
+        printf("\n");
+    }
+}
 int main (){
     zadanie_3a();
     przerwa();
     zadanie_3b();
     przerwa();
     zadanie_3c();
+    przerwa();
+    zadanie_3d();
     return 0;
 }
