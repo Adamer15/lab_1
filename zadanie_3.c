@@ -1,6 +1,3 @@
-//
-// Created by adame on 18.10.2023.
-//
 #include <stdio.h>
 #include <math.h>
 #define przerwa() "##############################"
