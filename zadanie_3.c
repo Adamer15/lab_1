@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <math.h>
-#define przerwa() printf("\n##############################\n")
+#define przerwa() printf("--------------------------------------------------")
 void zadanie_3a()
 {
     double a, b, s;
-    printf("Podaj dwie liczby: ");
+    printf("\nPodaj dwie liczby: ");
     scanf("%lf %lf", &a, &b);
     if (a > b)
         printf("Pierwsza liczba jest wieksza od drugiej");
@@ -28,8 +28,8 @@ void zadanie_3b()
     suma = a + b + c;
     srednia = suma/n;
     if (srednia > 5)
-        printf("Wysoka srenia ");
-    printf("%.2lf %.2lf\n", srednia, suma);
+        printf("Wysoka srenia\n");
+    printf("Srednia wynosi: %.2lf \nSuma wynosi: %.2lf\n", srednia, suma);
 }
 void zadanie_3c()
 {
@@ -39,9 +39,16 @@ void zadanie_3c()
     delta = b*b - (4*a*c);
     p = (-b)/(2*a);
     q = (-delta)/(4*a);
-    x1 = ((-b)+sqrt(delta))/(2*a);
-    x2 = ((-b)-sqrt(delta))/(2*a);
-    printf("Wierzcholek funkcji to: W(%.2lf, %.2lf). Miejsca zerowe: x1 = %.2lf, x2 = %.2lf\n", p, q, x1, x2);
+
+        x1 = ((-b) + sqrt(delta)) / (2 * a);
+        x2 = ((-b) - sqrt(delta)) / (2 * a);
+    if (delta >= 0) {
+        printf("Wierzcholek funkcji to: W(%.2lf, %.2lf). Miejsca zerowe: x1 = %.2lf, x2 = %.2lf\n", p, q, x1, x2);
+    }
+    else {
+        if (delta < 0)
+        printf("Wierzcholek funkcji to: W(%.2lf, %.2lf). BRAK ROZWIAZAN RZECZYWISTYCH\n", x1, x2);
+    }
 }
 void zadanie_3d()
 {
@@ -57,6 +64,7 @@ void zadanie_3d()
     }
 }
 int main (){
+    przerwa();
     zadanie_3a();
     przerwa();
     zadanie_3b();
@@ -64,5 +72,6 @@ int main (){
     zadanie_3c();
     przerwa();
     zadanie_3d();
+    przerwa();
     return 0;
 }
